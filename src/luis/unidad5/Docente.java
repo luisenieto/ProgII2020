@@ -18,10 +18,23 @@ public class Docente extends Personal {
     public Docente(int documento, String apellido, String nombre) {
         this(documento, apellido, nombre, "Adjunto");
     }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+    
+    
     
     @Override
     public void mostrar() {    
         super.mostrar();
+//        System.out.println("DNI: " + this.getDocumento());
+//        System.out.println("Apellido: " + this.getApellido());
+//        System.out.println("Nombre: " + this.getNombre());
         System.out.println("Cargo: " + this.cargo);
     }
     

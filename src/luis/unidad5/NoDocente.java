@@ -7,7 +7,13 @@ package luis.unidad5;
 
 public class NoDocente extends Personal {
     
-    public NoDocente(int documento, String apellido, String nombre, String cargo) {
+    public NoDocente(int documento, String apellido, String nombre) {
         super(documento, apellido, nombre);
     }
+    
+//    public void mostrar() {    
+//        System.out.println("DNI: " + this.getDocumento());
+//        System.out.println("Apellido: " + this.getApellido());
+//        System.out.println("Nombre: " + this.getNombre());
+//    }    
 }
