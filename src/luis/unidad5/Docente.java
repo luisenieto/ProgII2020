@@ -5,10 +5,9 @@
  */
 package luis.unidad5;
 
-import luis.unidad5.Personal;
-
 public class Docente extends Personal {
     private String cargo;
+    
     
     public Docente(int documento, String apellido, String nombre, String cargo) {
         super(documento, apellido, nombre);
@@ -48,4 +47,10 @@ public class Docente extends Personal {
 //    public void asignarNombre(String nombre) {
 //        this.nombre = nombre;
 //    }
+    
+    @Override
+     public String queSoy() {
+        return "Soy un docente";
+    }
+
 }

@@ -16,4 +16,9 @@ public class NoDocente extends Personal {
 //        System.out.println("Apellido: " + this.getApellido());
 //        System.out.println("Nombre: " + this.getNombre());
 //    }    
+    
+    @Override
+     public String queSoy() {
+        return "Soy un no docente";
+    }
 }

@@ -5,7 +5,9 @@
  */
 package luis.unidad5;
 
-public class Personal {
+import java.util.Objects;
+
+public abstract class Personal {
     private int documento;
     private String apellido;
     private String nombre;
@@ -42,7 +44,7 @@ public class Personal {
 
     @Override
     public int hashCode() {
-        int hash = 5;
+        int hash = 7;
         hash = 83 * hash + this.documento;
         return hash;
     }
@@ -55,7 +57,7 @@ public class Personal {
         if (obj == null) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
+        if (this.getClass().getSuperclass() != obj.getClass().getSuperclass()) {
             return false;
         }
         Personal other = (Personal) obj;
@@ -64,6 +66,8 @@ public class Personal {
         }
         return true;
     }
+
+    
     
     
     
@@ -79,9 +83,12 @@ public class Personal {
 //    }
     
     public void mostrar() {
+        System.out.println(this.queSoy());
         System.out.println("DNI: " + this.documento);
         System.out.println("Apellido: " + this.apellido);
-        System.out.println("Nombre: " + this.nombre);
+        System.out.println("Nombre: " + this.nombre);        
     }
+    
+    public abstract String queSoy();
     
 }
