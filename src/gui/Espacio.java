@@ -9,9 +9,9 @@ package gui;
 public class Espacio {
     private String nombre;
     private int capacidad;
-    private String tipo;
+    private Tipo tipo;
 
-    public Espacio(String nombre, int capacidad, String tipo) {
+    public Espacio(String nombre, int capacidad, Tipo tipo) {
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.tipo = tipo;
@@ -22,4 +22,30 @@ public class Espacio {
         System.out.println("Capacidad: " + this.capacidad);
         System.out.println("Tipo: " + this.tipo);
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public Tipo getTipo() {
+        return tipo;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
+    }
+    
+    
 }
