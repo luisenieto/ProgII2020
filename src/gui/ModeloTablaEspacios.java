@@ -20,10 +20,11 @@ public class ModeloTablaEspacios extends AbstractTableModel {
         nombreColumnas.add("Nombre");
         nombreColumnas.add("Capacidad");
         nombreColumnas.add("Tipo");
-        
-        espacios.add(new Espacio("A1", 300, Tipo.ANFITEATRO));
-        espacios.add(new Espacio("1-3-14", 50, Tipo.AULA));
-        espacios.add(new Espacio("1-3-08", 80, Tipo.LABORATORIO));
+        GestorEspacios ge = GestorEspacios.crear();
+        this.espacios = ge.verEspacios();
+//        espacios.add(new Espacio("A1", 300, Tipo.ANFITEATRO));
+//        espacios.add(new Espacio("1-3-14", 50, Tipo.AULA));
+//        espacios.add(new Espacio("1-3-08", 80, Tipo.LABORATORIO));
     }
 
     @Override
@@ -83,7 +84,11 @@ public class ModeloTablaEspacios extends AbstractTableModel {
     }
     
     
-    
+    public void actualizar() {
+        GestorEspacios ge = GestorEspacios.crear();
+        this.espacios = ge.verEspacios();
+        this.fireTableDataChanged();
+    }
     
     
 }

@@ -124,17 +124,17 @@ public class VentanaAEspacio extends javax.swing.JDialog {
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         String nombre = this.txtNombre.getText();
         int capacidad = Integer.parseInt(this.txtCapacidad.getText());
-        String tipo = this.txtTipo.getText();
+//        String tipo = this.txtTipo.getText();
         
-        Espacio unEspacio = new Espacio(nombre, capacidad, tipo);
-        this.espacios.add(unEspacio);
+//        Espacio unEspacio = new Espacio(nombre, capacidad, tipo);
+//        this.espacios.add(unEspacio);
         this.txtNombre.setText(null);
         this.txtCapacidad.setText(null);
         this.txtTipo.setText(null);
         this.txtNombre.requestFocus();
         
-        for(Espacio e : this.espacios)
-            unEspacio.mostrar();
+//        for(Espacio e : this.espacios)
+//            unEspacio.mostrar();
         
     }//GEN-LAST:event_btnAceptarActionPerformed
 
